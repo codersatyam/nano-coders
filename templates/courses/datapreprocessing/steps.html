@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block queryactive %} active {% endblock queryactive %}
+{% load static %}
+{% block body %}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<div class="wrapper" id="top">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>DATA PREPROCESSING</h3>
+    </div>
+    <ul class="lisst-unstyled components">
+      <li class="">
+        <a href="/query/preprocessing">INTRODUCTION </a>
+      </li>
+      <li class="active">
+        <a href="/query/usefulfunctions">STEPS OF PREPROCESSING </a>
+      </li>
+      <li class="">
+        <a href="/query/variables">VARIABLES</a>
+      </li>
+      <li class="">
+        <a href="#item-3">Data Cleaning</a>
+      </li>
+      <li class="">
+        <a href="#item-4">Delete Rows</a>
+      </li>
+    </ul>
+  </nav>
+ 
+ <div class="content" data-spy="scroll" data-target="#sidebar" data-offset="0">
+  <nav class="navbar navbar-expand lg navbar-light">
+    <div class="container">
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-right"></i>
+        <span class="align-right">Contents</span>
+        </button>
+    </div>
+  </nav>
+  
+ <center><h1><heading>Steps of Data Preprocessing</heading></h1></center>
+ <hr>
+ <h2>Following steps ....</h2>
+ <hr>
+ <br>
+ <ul>
+ <li><h5>Getting the Dataset</h5></li>
+ <br>
+ <li><h5>Importing required libraries</h5></li>
+ <br>
+ <li><h5>Import Dataset</h5></li>
+ <br>
+ <li><h5>Finding missing data </h5></li>
+ <br>
+ <li><h5>Encoding categorical data</h5></li>
+ <br>
+ <li><h5>Splitting dataset into training and test set</h5></li>
+ <br>
+ <li><h5>Feature scaling</h5></li>
+ </ul>
+ </div>
+ 
+<ul class="arrow">
+  <a href="/query/preprocessing"><li class="prev"><span></span></li></a>
+  <a href="/query/variables"><li class="next"><span></span></li></a>
+</ul>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <script>
+   $(document).ready(function(){
+      $("#sidebarCollapse").on('click',function(){
+        setTimeout(function(){
+      $("#sidebar").toggleClass('active');
+    },500);
+  });
+       });
+      $('#sidebar ul li').on('click', function () {
+             $('#sidebar ul .active').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+
+{% endblock %}

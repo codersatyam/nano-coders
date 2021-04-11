@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Tutorials {% endblock title %}
+{% block tutorialsactive %} active {% endblock tutorialsactive %}
+{%block body %}
+    <style> 
+    p{
+      font-family: 'Poppins', sans-serif;
+      font-size:1.1em;
+      font-weight: 600;
+      line-height: 1.7em;
+       
+    }
+#content li {
+  list-style:disc;
+}
+    a,a:hover,a:focus{
+      color:inherit;
+       text-decoration: none;
+       transition: all 0.3s;
+    }
+  .wrapper {
+    display: flex;
+    text-decoration: none;
+    transition: all 0.3s;
+    
+  }
+  #sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    background:#7386D5;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  #sidebar.active{
+
+    margin-left: -250px!important;
+    transition: all 0.3s;
+  }
+  #sidebar .sidebar-header
+  {
+    padding: 20px;
+     background: #6d7fcc;
+
+  }
+  #sidebar ul.components{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+
+  }
+  #sidebar ul p{
+    color:#fff;
+    padding: 10px;
+  }
+  #sidebar ul li a{
+    padding: 10px;
+    font-size:1.1em;
+    display: block;
+  }
+  #sidebar ul li a:hover{
+    color:#7386D5;
+    background:#fff;
+  }
+  #sidebar ul li.active>a,
+  a[aria-expanded="true"]{
+    color:#7386D5;
+    background: #FFF;
+  }
+  a[data-toggle="collapse"]{
+    position: relative;
+  }
+  .dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(-50%);
+  }
+  ul ul a{
+    font-size: 0.9em!important;
+    padding-left: 30px!important;
+    background: #6d7fcc;
+
+  }
+  #content{
+    width:100%;
+    padding: 42px;
+    margin-right: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+  }
+  </style> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<div class="wrapper" id="top">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>Nano Coders</h3>
+    </div>
+    <ul class="lisst-unstyled components">
+      <p>HTML</p>
+      <li class="active">
+        <a href="#item-1">Introduction</a>
+      </li>
+      <li class="">
+        <a href="#item-2">item 2</a>
+      </li>
+      <li class="">
+        <a href="#item-3">item 3</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+
+<div id="content" data-spy="scroll" data-target="#sidebar" data-offset="0">
+  <nav class="navbar navbar-expand lg navbar-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left"></i>
+        <span>Contents</span>
+        </button>
+    </div>
+  </nav>
+  <br><br>
+  <h2 id="item-1">Introduction</h2>
+
+<p><strong>Python</strong>&nbsp;is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This&nbsp;<strong>tutorial</strong>gives enough understanding on&nbsp;<strong>Python programming</strong>&nbsp;language.</p><h2>Why to Learn Python?</h2><p><strong>Python</strong>&nbsp;is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.</p><p><strong>Python</strong>&nbsp;is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:</p><ul class="list"><li><p><strong>Python is Interpreted</strong>&nbsp;âˆ’ Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.</p></li><li><p><strong>Python is Interactive</strong>&nbsp;âˆ’ You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.</p></li><li><p><strong>Python is Object-Oriented</strong>&nbsp;âˆ’ Python supports Object-Oriented style or technique of programming that encapsulates code within objects.</p></li><li><p><strong>Python is a Beginner's Language</strong>&nbsp;âˆ’ Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.</p></li></ul><h2>Characteristics of Python</h2><p>Following are important characteristics of&nbsp;<strong>Python Programming</strong>&nbsp;âˆ’</p><ul class="list"><li><p>It supports functional and structured programming methods as well as OOP.</p></li><li><p>It can be used as a scripting language or can be compiled to byte-code for building large applications.</p></li><li><p>It provides very high-level dynamic data types and supports dynamic type checking.</p></li><li><p>It supports automatic garbage collection.</p></li><li><p>It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.</p></li><li><h2>Applications of Python</h2><p>As mentioned before, Python is one of the most widely used language over the web. I'm going to list few of them here:</p><ul class="list"><li><p><strong>Easy-to-learn</strong>&nbsp;âˆ’ Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.</p></li><li><p><strong>Easy-to-read</strong>&nbsp;âˆ’ Python code is more clearly defined and visible to the eyes.</p></li><li><p><strong>Easy-to-maintain</strong>&nbsp;âˆ’ Python's source code is fairly easy-to-maintain.</p></li><li><p><strong>A broad standard library</strong>&nbsp;âˆ’ Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.</p></li><li><p><strong>Interactive Mode</strong>&nbsp;âˆ’ Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.</p></li><li><p><strong>Portable</strong>&nbsp;âˆ’ Python can run on a wide variety of hardware platforms and has the same interface on all platforms.</p></li><li><p><strong>Extendable</strong>&nbsp;âˆ’ You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.</p></li><li><p><strong>Databases</strong>&nbsp;âˆ’ Python provides interfaces to all major commercial databases.</p></li><li><p><strong>GUI Programming</strong>&nbsp;âˆ’ Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.</p></li><li><p><strong>Scalable</strong>&nbsp;âˆ’ Python provides a better structure and support for large programs than shell scripting.</p></li></ul><h2><br></h2></li></ul>
+     
+  <div class="line"></div>
+  <h2 id="item-2">some more</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus ducimus quo est eum aperiam sit distinctio itaque hic ipsam asperiores quibusdam exercitationem, quidem illum inventore vel animi eius quasi nemo dignissimos quod, at, dolorem sint dolor? Aspernatur, doloribus et. Vero vitae ab quo praesentium nobis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi alias iure obcaecati, quo blanditiis asperiores ratione voluptate repudiandae corrupti unde illum neque, quisquam reiciendis. Porro est ipsa nihil, ex nisi expedita minima in optio, aperiam voluptas quia aliquam fuga sapiente repudiandae perspiciatis unde ullam? Vel, autem neque pariatur deserunt fugiat beatae sed ipsa. Cupiditate at dolorum nesciunt minima animi quasi earum, consectetur sunt porro laborum, doloremque ipsam dolore! Eveniet vitae distinctio, minima assumenda facere maxime sint, quos voluptas vel omnis at architecto quisquam! Illo ipsam autem, fugit maiores expedita rerum?</p>
+    <h2 id="item-3"> extra more</h2> 
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium at iste eaque, eum molestias officia rem. Consequuntur error pariatur est omnis temporibus unde, commodi dignissimos quis deserunt fugit nam quam sequi ex qui aut similique aperiam inventore? Ducimus ipsum dicta vitae illo doloribus id fuga molestiae natus accusamus saepe enim laboriosam eos eveniet harum dolor inventore fugiat ratione, explicabo quibusdam error quos quis? Mollitia a, voluptate consequatur vero ratione harum, fuga consequuntur laborum ab repellat corporis optio commodi, iusto inventore minus ad recusandae in voluptas. Quis quaerat deleniti neque fugit harum reprehenderit maiores molestias debitis non? Libero, vel! Ipsam animi provident quo, numquam veniam omnis quas sit, modi a voluptatum minus cumque minima similique laboriosam consequatur dicta quibusdam totam pariatur et at commodi, suscipit laudantium ratione. Molestias nobis voluptas nisi sit, quia voluptates ducimus numquam ea quo distinctio ipsum, quis ex qui nesciunt nam quisquam magni. Enim incidunt libero ratione minus sint possimus animi reiciendis corporis beatae dolorem blanditiis quisquam velit aliquam tempora fugiat rerum nobis, sequi reprehenderit ipsa illum voluptas impedit? Tempora laudantium inventore adipisci amet id laboriosam omnis voluptatum? Illum labore sequi quis, enim suscipit ut officia saepe nemo dignissimos molestiae tenetur tempora autem dicta fugiat quasi voluptate sed veritatis distinctio rem mollitia maiores a. Quas cupiditate commodi pariatur ea repellendus soluta debitis tempora minima, beatae at ipsum quo nostrum natus dolorem voluptatem sed consectetur quia tempore iste nisi porro quis minus facilis? Ex voluptate, adipisci, at error accusamus ducimus, maiores unde libero id recusandae deserunt vitae reiciendis ratione doloribus dicta distinctio. Odit eos veritatis quisquam optio, maiores quidem? Totam rem vero illo libero minus vel quisquam amet repudiandae pariatur dolore, perferendis molestias beatae repellat in deleniti quidem saepe qui facilis, quibusdam ratione cum velit ducimus iusto reiciendis! Consectetur quasi quae, natus nobis, fugiat velit laudantium accusamus fuga corrupti totam voluptatem consequuntur, ipsa maxime similique magnam veritatis temporibus animi reiciendis perspiciatis cumque id magni possimus mollitia voluptatum. Sed exercitationem, tempora iure aspernatur, animi tempore, accusamus hic voluptates recusandae eius sequi quo dolorum. Similique inventore voluptatum officia temporibus. Accusantium quis excepturi voluptatum itaque, eveniet laboriosam dolorem ducimus facilis sequi numquam beatae eius facere, qui nulla totam, ratione cum nesciunt similique illo fugit vitae. Minima officiis in est aliquam reiciendis porro accusamus! Omnis recusandae at veniam harum impedit quaerat odio voluptates quos voluptatum magni optio libero assumenda nisi atque ad vero voluptatibus minima, suscipit fugit? Aperiam exercitationem saepe ducimus quibusdam sunt eum itaque consequuntur repellat laudantium deleniti, dolore architecto nulla facere modi natus harum numquam. Doloribus reiciendis repudiandae, illo quam reprehenderit voluptatum omnis eligendi. Laudantium dolorum, quidem iste, cumque vitae quos esse fugit rem doloribus beatae, repellat perspiciatis nostrum illo tempore reprehenderit cum eaque assumenda a modi. Voluptatibus, corrupti. Ullam praesentium vitae quod illum voluptate ipsum officiis explicabo deleniti, nobis suscipit impedit asperiores quasi quam aut, quae ea veniam facere. Rerum, blanditiis? Ea asperiores ducimus neque numquam maxime quaerat blanditiis laudantium, voluptate alias inventore perferendis explicabo veritatis unde ex ipsa adipisci deleniti provident voluptates. Tenetur fugit harum, ipsum nostrum cupiditate maiores odio eaque repellat earum non cum, architecto aspernatur veniam cumque nesciunt expedita odit repudiandae! Aspernatur quibusdam dolore facere numquam possimus nihil, inventore in itaque, suscipit soluta necessitatibus, eligendi explicabo quia quisquam libero? Doloremque voluptate cum incidunt tenetur consequuntur autem aliquid repellendus dolorum aliquam voluptatum, est deserunt, porro molestiae magnam ipsum animi eius quaerat libero accusamus adipisci quibusdam rem. Labore, dignissimos praesentium autem iusto non ea. Minus adipisci id, perferendis sit ut impedit accusamus beatae quam veritatis dicta voluptatibus architecto dolore quaerat, nobis quis! Sequi culpa officiis voluptates magni quis, dolor aliquam maxime nesciunt quam? Enim reiciendis ea dolor, nesciunt quo eveniet. Sequi incidunt quasi nobis excepturi laboriosam, porro reprehenderit animi corporis impedit aspernatur totam itaque deserunt aliquid nihil quis repudiandae iusto non accusantium rem magnam et sapiente dolorem dolorum! Dolorum dignissimos, quia rem qui, voluptatum optio consequuntur voluptatibus inventore cupiditate deserunt sapiente quod reprehenderit vero? Nam obcaecati incidunt, voluptate nisi eius dolorem excepturi natus? Libero voluptas excepturi eos nam voluptatem aliquid, dolorem esse, consequuntur facere cumque delectus fugiat iure autem quas quo voluptatibus fuga quaerat reprehenderit cupiditate, explicabo fugit? Deserunt eius hic ut? Eum, possimus repellendus! Velit quisquam, esse labore ab odio voluptatum soluta obcaecati eum a, unde est quis corrupti illo iusto laboriosam in expedita ea eaque nulla nihil. Cupiditate nobis hic aut corrupti, deleniti veritatis sint libero? Vel dicta magni corrupti eum. Repellendus architecto, dolor quo delectus, voluptas amet quis sint quae sit quidem aspernatur, minus minima. Eos aperiam facere porro nulla! Praesentium, animi molestiae illum perferendis provident harum earum hic natus quam atque adipisci a at assumenda ipsam culpa amet unde totam? Excepturi enim ut impedit! Quaerat culpa quasi alias aut neque corporis adipisci quos debitis amet ducimus, illo quod veniam inventore eos sunt accusamus perspiciatis esse pariatur ratione iure deleniti, autem repellat? Inventore eos voluptate animi expedita itaque suscipit, veritatis sed impedit laboriosam corrupti autem necessitatibus tenetur obcaecati aut eligendi est ipsa voluptatibus minus corporis rerum dolorum magnam provident. Harum dolorum porro quod voluptates ratione delectus non debitis nisi est. Odio molestiae dolores consequuntur itaque debitis! Possimus maiores incidunt autem officia, reprehenderit odio repellat? Itaque et porro quam ipsam animi, repellendus eos eius? Quam modi voluptate dolor, facere animi ex at eaque dignissimos rem quos accusamus harum voluptas in vel molestias accusantium tempora! Temporibus alias similique blanditiis ullam dolore tenetur autem esse eaque nostrum, cupiditate repellat placeat, aperiam sapiente laboriosam voluptatem voluptatum pariatur dicta sunt possimus. Alias praesentium voluptatibus vero rerum. Aperiam alias temporibus, repellat odio asperiores iusto nobis error ad dolorum ipsa rerum, illum voluptates corporis debitis tempore expedita ex doloribus magnam laborum eligendi ullam. Recusandae necessitatibus dolor odio suscipit perferendis in iure libero velit nobis sequi veniam provident tempora dicta commodi nemo, quo facere quis ex, soluta aut, cumque aperiam? Reiciendis repellendus labore iusto et alias sit fuga deleniti quibusdam totam omnis. Quae explicabo est reiciendis, eaque repellendus, perspiciatis tempore officia facere rerum natus commodi omnis asperiores perferendis. Expedita commodi aspernatur atque ipsam, vel corrupti laboriosam placeat iure, sed suscipit nulla error libero?</p>
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <script>
+      $(document).ready(function(){
+        $("#sidebarCollapse").on('click',function(){
+          $("#sidebar").toggleClass('active');
+        });
+      });
+      $('#sidebar ul li').on('click', function () {
+             $('#sidebar ul .active').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+    {%endblock body %}

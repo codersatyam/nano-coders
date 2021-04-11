@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{%block title %} projects {% endblock title %}
+{% block projectsactive %} active {% endblock projectsactive %}
+{%block body %}
+{% load static %}
+<style>
+  pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.center {
+  margin: auto;
+  border: 5px solid orangered;
+  padding: 10px;
+  background: #dcdcdc;
+}
+h3 span{
+  font-weight: bold;
+  color: white;
+  background: orangered;
+  border: 3px solid black;
+  padding: 1px;
+}
+@media (max-width: 768px){
+  .center{
+    width: 100%!important;
+  }
+}
+  
+</style>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="..." class="d-block w-100" alt="...">
+      </div>
+      
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">STONE, PAPER, SCISSOR</h1>
+      <p class="lead">This game requires a python module called 'random'  and some basic concepts of python.
+        Is this  game basically first user choose between three choices and then computer randomly choose between three then condition check and accourding to the conditons reults declare.
+      </p>
+    </div>
+  </div>
+ 
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+      <div style="width: 600px; justify-content: center;" class="center">
+        <h3 class="text-center"><span>Source Code</span></h3>
+          <pre style="background-color:#2b2b2b; padding:8px;color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:9.8pt;"><span style="color:#cc7832;">import </span>random<br><span style="color:#cc7832;">def </span>game(value):<br>    options = [<span style="color:#6a8759;">"STONE" </span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">"PAPER"</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">"SCISSOR"</span>]<br>    computer = random.choice(options)<br>    <span style="color:#cc7832;">if </span>value <span style="color:#cc7832;">in </span>options:<br><br>       <span style="color:#cc7832;">if </span>computer == <span style="color:#6a8759;">"STONE" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"STONE"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : DRAW"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"PAPER" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"STONE"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return  </span><span style="color:#6a8759;">"RESULT : COMPUTER WIN"<br></span><span style="color:#6a8759;">      </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"SCISSOR" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"STONE"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : YOU WIn"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"PAPER" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"PAPER"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : DRAW"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"SCISSOR" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"PAPER"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return  </span><span style="color:#6a8759;">"RESULT : COMPUTER WIN"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"STONE" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"PAPER"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : YOU WIn"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"SCISSOR" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"SCISSOR"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : DRAW"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"STONE" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"SCISSOR"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : COMPUTER WIN"<br></span><span style="color:#6a8759;">       </span><span style="color:#cc7832;">elif </span>computer == <span style="color:#6a8759;">"PAPER" </span><span style="color:#cc7832;">and </span>value == <span style="color:#6a8759;">"SCISSOR"</span>:<br>           print(<span style="color:#6a8759;">"computer's choice :" </span>+ computer)<br>           <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"RESULT : YOU WIn"<br></span><span style="color:#6a8759;">    </span><span style="color:#cc7832;">else</span>:<br>       <span style="color:#cc7832;">return </span><span style="color:#6a8759;">"WRONG INPUT"<br></span><span style="color:#6a8759;"><br></span><span style="color:#6a8759;"><br></span>print(<span style="color:#6a8759;">"!!!!!!WELCOME TO THE [STONE , PAPER, SCISSOR] GAME !!!!!!!"</span>)<br>entry=input(<span style="color:#6a8759;">"ENTER USER NAME  : "</span>)<br><br>print(<span style="color:#6a8759;">"WELCOME:{}"</span>.format(entry.upper()))<br>print(<span style="color:#6a8759;">"###ENTER quite when you want to leave"</span>)<br>print(<span style="color:#6a8759;">"PLEASE ENTER ANY ONE AMONG STONE,PAPER,SCISOR "</span>)<br><br><span style="color:#cc7832;">while True</span>:<br><br>    val = input()<br>    <span style="color:#cc7832;">if </span>val == <span style="color:#6a8759;">"quite"</span>:<br><br>        print(<span style="color:#6a8759;">"THANKS FOR PLAYING THIS GAME"</span>)<br>        <span style="color:#cc7832;">break<br></span><span style="color:#cc7832;">    if </span>val.islower():<br>             value = val.upper()<br>             result = game(value)<br>             print(result)<br>    <span style="color:#cc7832;">else</span>:<br>       result = game(val)<br>       print(result)<br></pre>
+      </div>
+            </div>
+          </div> 
+      </div>
+  {% endblock body %}

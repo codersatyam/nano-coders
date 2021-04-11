@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{%block title %} Blog {% endblock title %}
+{% block blogsactive %} active {% endblock blogsactive %}
+{%block body %}
+{% load humanize %}
+<div class="container my-4 mx-5">
+        <center><h2>BLOG</h2></center>
+    <hr class="featurette-divider">
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">By-{{post.author}}__{{post.date}} </p>
+         <p class="blog-post-meta">{{post.content}} </p>
+</div>
+<div class="container mx-5 my-3 ">
+  <h3>COMMENTS : ({{length}})</h3>
+{% if user.is_authenticated %}
+
+  <form method="post" action="/blogs/postcomments">
+    <div class="container mx-5 my-3">
+      
+  <div class="form-group">
+   
+    <input type="text" class="form-control h-80 w-50" name="comment" placeholder="Enter your comment " required>
+    <input type="hidden" name="postsno" value="{{post.sno}}">
+    </div>
+    {% csrf_token %}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+{% else %}
+<label><b><h3>Please login to do comments</h3></b></label>
+{% endif %} 
+</div>
+
+
+{% for comment in comments  %}
+
+<div class="conatiner my-3 mx-auto" style="width: 1000px;" >
+  
+  <div class="card" style="width: 19rem;">
+      
+      <div class="card-body">
+        <h5 class="card-title">{{comment.user.username}}  (<label><h6> {{comment.time|naturaltime}}</h6></label>)</h5>
+        <p class="card-text">{{comment.comment}}</p>
+        
+      </div>
+    </div>
+    
+</div>
+      <div class="container">
+        <div class="col-6">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="replybox{{comment.sno}}" aria-expanded="false" aria-controls="replybox{{comment.sno}}">
+            Button with data-target
+          </button>
+        </div>  
+      <div class="collapse" id="replybox{{comment.sno}}">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+      </div>
+{% endfor %}
+{% endblock body %}

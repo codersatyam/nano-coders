@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{%block title %} projects {% endblock title %}
+{% block projectsactive %} active {% endblock projectsactive %}
+{%block body %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="..." class="d-block w-100" alt="...">
+      </div>
+      
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">STONE, PAPER, SCISSOR</h1>
+      <p class="lead">This game requires a python module called 'random'  and some basic concepts of python.
+        Is this  game basically first user choose between three choices and then computer randomly choose between three then condition check and accourding to the conditons reults declare.
+      </p>
+    </div>
+  </div>
+  
+  <div class="card my-0 " style="width: 50rem;">
+    
+    <div class="card-body my-0 ">
+      <p class="card-text my-1">
+        Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.Our website NANO CODERS provides a lot of blogs for you and also allow you to write your own blog here .
+        Blogs on this website contains a lot of stuff which helps you a lot in your learning.Mainly blogs content are coding and tech .
+        And we insure that these blogs will give you complete information regarding your issues and not missguide  you in any case.
+      </p>
+    </div>
+  </div>
+  
+  {% endblock body %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} search result {% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block body %}
+{% if allpost|length < 1 %}
+<div class="conatiner my-4 ">
+<h3><center><i>SEARCH RSULTS:  Not found </i> </center></h3>
+<p> ## Your search - <b>{{query|truncatechars:40}}</b>- did not match any documents.</p>
+
+<ul>
+Suggestions:
+
+<li>Make sure that all words are spelled correctly.</li>
+<li>Try different keywords.</li>
+<li>Try more general keywords.</li>
+<li>Try fewer keywords.</li>
+</ul>
+</div>
+{% else %}
+
+<div class="container my-3">
+  <h1><center><i>SEARCH RSULTS : </i>  [ {{time}} ]  results found  </center></h1>
+</div>
+{% endif %}
+{% for post in allpost %}
+<div class="container my-3">
+ 
+  <div class="jumbotron">
+  <h1 class="display-4">{{post.title}}</h1>
+  <p class="lead"> AUTHOR--{{post.author}} : {{post.date}}</p>
+  <hr class="my-4">
+  <p>{{post.content| truncatechars:100 }}</p>
+  <a class="btn btn-primary btn-lg" href="/blogs/{{post.slug}}" role="button">Read more..</a>
+</div>
+  </div>
+
+{% endfor %}
+{%endblock body %}

@@ -1,0 +1,276 @@
+
+<!doctype html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<html lang="en">
+  <head>
+    <style>
+        body { 
+           background-color: #dcdcdc!important; 
+          
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+</style>
+    <!-- Required meta tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+<link rel="manifest" href="/static/favicons/site.webmanifest">
+<link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/static/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/static/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}{% endblock title %}</title>
+   
+  </head>
+  <body>
+   <div class="icons">
+    <a href="https://www.instagram.com/nano_coders/" class="instagram text-white"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="#" class="youtube text-white"><i class="fab fa-youtube"></i>YouTube</a>
+    <a href="https://www.facebook.com/nanocoders1026" class="facebook text-white"><i class="fa fa-facebook-f"></i>Facebook</a>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+          
+      
+      <a class="navbar-brand"><img src="{% static 'images/navbar logo.png' %}" alt=""></a>
+      <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav custom-toggler mr-auto">
+      <li class="nav-item {% block homeactive %} {% endblock homeactive %}">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item {% block blogsactive %} {% endblock blogsactive %}">
+        <a class="nav-link" href="/blogs">Blogs <span class="sr-only">(current)</span></a>
+      </li>
+
+      
+        
+      <!--
+        <li class="nav-item {% block tutorialsactive %} {% endblock tutorialsactive %}">
+        <a class="nav-link" href="/tutorials">Laptop</a>
+      </li>
+        <li class="nav-item  {% block projectsactive %} {% endblock projectsactive %}">
+        <a class="nav-link" href="/projects">Projects</a>
+      </li>
+     -->
+      <li class="nav-item {% block queryactive %} {% endblock queryactive %}">
+        <a class="nav-link" href="/query">Courses</a>
+      </li>
+      <li class="nav-item {% block buyactive %} {% endblock buyactive %}">
+        <a class="nav-link" href="/buy">Buy</a>
+      </li>
+      
+    </ul>
+<div class="search-container">
+    <form  method ="get" action="/search" class="form-inline">
+      <input class=" mr-sm-2 input" placeholder="Search Blogs" aria-label="Search" name="query" id="query">
+      <button class=" button"  type="submit" ><i class="fa fa-search text-white"></i></button>
+    </form>
+</div>
+    {% if user.is_authenticated %}
+      <ul class="navbar-nav ">
+      <li class="nav-item">
+            <bold><a class="nav-link float-right" href="#">{{request.user}}</a></bold>
+      </li>
+       <a href="/logout">   <button type="button" class="btn btn-success float-right" > LOGOUT
+       </button></a>
+
+      </ul>
+
+    {% else %}
+    <!-- Button  to trigger login  modal -->
+<button type="button" class="btn btn-success mr-1 mx-2 my-2" data-toggle="modal" data-target="#login">
+  Log in
+</button>
+    <!-- Button to  trigger signup modal -->
+<button type="button" class="btn btn-success mr-1 mx-1 my-2" data-toggle="modal" data-target="#signin">
+  Sign up
+</button>
+     {%endif %}
+ </div>
+</div>
+</nav>
+
+
+    <!--  login Modal -->
+<div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="{% static 'images/navbar logo.png' %}" alt="">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post"  action="/login">
+          {% csrf_token %}
+  <div class="form-group">
+    <label for="loginusername">User Name</label>
+    <input type="text" class="form-control" id="loginusername" name="loginusername" aria-describedby="text">
+
+  </div>
+  <div class="form-group">
+    <label for="loginpassword">Password</label>
+    <input type="password" class="form-control" id="loginpassword" name="loginpassword">
+  </div>
+
+
+
+      <div class="modal-footer">
+      <div class="row">
+        <div class="col">
+          <label class="mt-2"><a href="/reset_password"> Forgot Password?</a></label>
+          
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+        
+      </div>
+    
+       
+      
+ </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- signup Modal -->
+<div class="modal fade" id="signin" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <img src="{% static 'images/navbar logo.png' %}" alt="">
+     <button type="button " class="close text-white" data-dismiss="modal" aria-label="Close">
+
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+      <div class="modal-body">
+        <form action="/signup" method="post" >
+  <div class="form-group ">
+
+
+    <h5> <label for="username">User Name</label></h5>
+    <input type="text" class="form-control" id="username"  name="username" placeholder="Choose a unique user name" required  >
+  </div>
+   <div class="form-group">
+     <h5><label for="firstname">First Name</label></h5>
+    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name " required>
+  </div>
+          <div class="form-group">
+            <h5><label for="lastname">Last Name</label></h5>
+    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name" required>
+  </div>
+          <div class="form-group">
+            <h5><label for="email">Email</label></h5>
+    <input type="email" class="form-control" id="email"  name="email" placeholder="Enter you mail id" required>
+  </div>
+  <div class="form-group">
+    <h5><label for="password">Password</label></h5>
+    <input type="password" class="form-control" id="password"  name="password" placeholder="Make a strong password"required>
+  </div>
+  <div class="form-group">
+    <h5><label for="confirmpassword">Confirm Password</label></h5>
+    <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter your password again" required>
+  </div>
+
+
+
+      <div class="modal-footer">
+{% csrf_token %}
+        <button type="submit" class="btn btn-primary " >Create an Account</button>
+      </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>WELCOME : </strong>{{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    {% endfor %}
+    {%block body %}
+    {%endblock body %}
+
+    <footer class="container-fluid py-5 bg-dark mt-3">
+  <div class="row">
+    <div class="col-12 col-md foot">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+          <small class="d-block mb-3 text-muted foot ">© 2020-2021</small>
+      </div>
+    <div class="col-6 col-md foot">
+      <h5>Features</h5><hr>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="/query">Turorials</a></li>
+        <!--<li><a class="text-muted" href="/tutorials">tutorials</a></li>
+        <li><a class="text-muted" href="/projects">projects</a></li>
+        <li><a class="text-muted" href="#">tools</a></li> -->
+
+      </ul>
+    </div>
+     <div class="col-6 col-md foot social">
+      <h5>Social Media</h5><hr>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="https://www.instagram.com/nano_coders/">Instagram</a></li>
+        <li><a class="text-muted" href="#">YouTube</a></li>
+        <li><a class="text-muted" href="https://www.facebook.com/nanocoders1026">Facebook</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md foot">
+      <h5>Contact us</h5><hr>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="/contact">contact</a></li>
+
+      </ul>
+
+    </div>
+    <div class="col-6 col-md foot">
+      <h5>About us</h5>
+      <hr>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="/about">NanoCoders</a></li>
+
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      </div>
+  </body>
+</html>

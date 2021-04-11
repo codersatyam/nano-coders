@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title %} Projects {% endblock title %}
+{% block projectsactive %} active {% endblock projectsactive %}
+
+{%block body %}
+
+<div class="header" id="topheader">
+
+          <section class="header-section">
+              <div class="centre-div">
+                  <h1 class="font-weight-bold">Want some awesome projects?</h1><br>
+                  <h3 class="font-weight-bold">Then You are at the right place!</h3><br>
+                    <div class="header-buttons">
+                        <a href="/projects/python"><img src="{% static 'images/python.png' %}" alt="Avatar"></a>
+                        <a href="/projects/java"><img src="{% static 'images/java.png' %}" alt="Avatar"></a>
+                        <a href="/projects/c++"><img src="{% static 'images/C++.png' %}" alt="Avatar"></a>
+
+                    </div>
+              </div>
+
+          </section>
+    </div>
+
+<!-- end -->
+
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    {%endblock body %}

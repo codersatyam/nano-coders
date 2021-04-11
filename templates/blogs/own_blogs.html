@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} blogs {% endblock title %}}
+{% block blogsactive %} active {% endblock blogsactive %}
+{% block body %}
+{% load humanize %}
+ {% if user.is_authenticated %}
+
+<div class="container my-3 text-center"><p><h2> WELCOME :- {{user.username}}</h2></p>
+  </div>
+  <hr>
+  <p><h2 class="text-center">WRITE YOUR BLOGS HERE</h2></p>
+  <hr>
+  <br>
+<div class="conatiner my-3 mx-5 col-12" >
+    
+    <form method="POST" action="/blogs/make">
+        
+       
+          
+          <div class="form-group">
+           <center><h2> <label for="title">title</label></h2></center>
+            <input type="text" class="form-control" id="title" name="title" required>
+          </div>
+           
+        <div class="form-group">
+          <center><h2><label for="content">Content</label></h2></center>
+          <textarea class="form-control" id="content"  name="content" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <center><h2><label for="slug">Blog ID</label></h2></center>
+            <input type="text" class="form-control" id="slug" name="slug" required>
+          </div>
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% else %}
+<h3>please login to create your own blogs</h3>
+{% endif %}
+
+{% endblock %}

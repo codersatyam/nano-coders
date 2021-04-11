@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block queryactive %} active {% endblock queryactive %}
+{% load static %}
+{% block body %}
+<style> 
+    p{
+      font-family: 'Poppins', sans-serif;
+      font-size:1.1em;
+      font-weight: 600;
+      line-height: 1.7em;
+       
+    }
+#content li {
+  list-style:disc;
+}
+    a,a:hover,a:focus{
+      color:inherit;
+       text-decoration: none;
+       transition: all 0.3s;
+    }
+  .wrapper {
+    display: flex;
+    text-decoration: none;
+    transition: all 0.3s;
+    
+  }
+  #sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    background:#7386D5;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  #sidebar.active{
+
+    margin-left: -250px!important;
+    transition: all 0.3s;
+  }
+  #sidebar .sidebar-header
+  {
+    padding: 20px;
+     background: #6d7fcc;
+
+  }
+  #sidebar ul.components{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+
+  }
+  #sidebar ul p{
+    color:#fff;
+    padding: 10px;
+  }
+  #sidebar ul li a{
+    padding: 10px;
+    font-size:1.1em;
+    display: block;
+  }
+  #sidebar ul li a:hover{
+    color:#7386D5;
+    background:#fff;
+  }
+  #sidebar ul li.active>a,
+  a[aria-expanded="true"]{
+    color:#7386D5;
+    background: #FFF;
+  }
+  a[data-toggle="collapse"]{
+    position: relative;
+  }
+  .dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(-50%);
+  }
+  ul ul a{
+    font-size: 0.9em!important;
+    padding-left: 30px!important;
+    background: #6d7fcc;
+
+  }
+  #content{
+    width:100%;
+    padding: 42px;
+    margin-right: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+  }
+  </style> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<div class="wrapper" id="top">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>DATA PREPROCESSING</h3>
+    </div>
+    <ul class="lisst-unstyled components">
+      <li class="">
+        <a href="/query/preprocessing">INTRODUCTION </a>
+      </li>
+      <li class="active">
+        <a href="/query/usefulfunctions">STEPS OF PREPROCESSING </a>
+      </li>
+      <li class="">
+        <a href="/query/variables">VARIABLES</a>
+      </li>
+      <li class="">
+        <a href="#item-3">Data Cleaning</a>
+      </li>
+      <li class="">
+        <a href="#item-4">Delete Rows</a>
+      </li>
+    </ul>
+  </nav>
+ <br>
+{% endblock %}

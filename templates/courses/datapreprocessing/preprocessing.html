@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title %} Courses {% endblock title %}
+{% block tutorialsactive %} active {% endblock tutorialsactive %}
+{%block body %}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div class="wrapper" id="top">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>DATA PREPROCESSING</h3>
+    </div>
+    <ul class="lisst-unstyled components">
+      <li class="active">
+        <a href="/query/preprocessing">INTRODUCTION </a>
+      </li>
+      <li class="">
+        <a href="/query/steps">STEPS OF PREPROCESSING </a>
+      </li>
+      <li class="">
+        <a href="/query/variables">VARIABLES</a>
+      </li>
+      <li class="">
+        <a href="#item-3">Data Cleaning</a>
+      </li>
+      <li class="">
+        <a href="#item-4">Delete Rows</a>
+      </li>
+    </ul>
+  </nav>
+<div class="content" data-spy="scroll" data-target="#sidebar" data-offset="0">
+  <nav class="navbar navbar-expand lg navbar-light">
+    <div class="container">
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-right"></i>
+        <span class="align-right">Contents</span>
+        </button>
+    </div>
+  </nav>
+<!-- <img src="{% static 'images/Dirty Data.png' %}"> -->
+<center><h1><heading>DATA PREPROCESSING<heading></h1></center>
+<hr>
+<br>
+<h2>What is Data Preprocessing ?</h2>
+<hr>
+<br>
+<h5>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, lacking in certain behaviors or trends, and is likely to contain many errors.</h5>
+<br>
+<h5>Data preprocessing is a proven method of resolving such issues. Data preprocessing prepares raw data for further processing.</h5>
+<br>
+<h5>In Machine Learning (ML) processes, data preprocessing is critical to encode the dataset in a form that could be interpreted and parsed by the algorithm</h5>
+</div>
+
+
+<ul class="arrow">
+    <a href="/query/preprocessing"><li class="prev"><span></span></li></a>
+    <a href="/query/steps"><li class="next"><span></span></li></a>
+</ul>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <script>
+      $(document).ready(function(){
+      $("#sidebarCollapse").on('click',function(){
+        setTimeout(function(){
+      $("#sidebar").toggleClass('active');
+    },500);
+  });
+       });
+      $('#sidebar ul li').on('click', function () {
+             $('#sidebar ul .active').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+    {%endblock body %}

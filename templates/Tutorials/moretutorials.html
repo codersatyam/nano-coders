@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style> 
+      /* Set the border color */ 
+        
+      .custom-toggler.navbar-toggler { 
+          border-color: black; 
+      } 
+      /* Setting the stroke to green using rgb values (0, 128, 0) */ 
+        
+      .custom-toggler .navbar-toggler-icon { 
+          background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 128, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+      } 
+  </style> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container text-uppercase p-2">
+          
+      
+      <a class="navbar-brand font-weight-bold text-white" href="#">NANO CODERS</a>
+      <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto custom-toggler">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../projects/index.html">Projects</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Tutorials</a>
+          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>      
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/apache_camel/index.htm" title="Learn Apache Camel"><img src="ansible.png" alt="Learn Apache Camel"/></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/ansible/index.htm" title="Learn Ansible">
+                <img src="ansible.png" alt="Learn Ansible"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/apache_camel/index.htm" title="Learn Apache Camel">
+                    <img src="ansible.png" alt="Learn Apache Camel"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/apache_camel/index.htm" title="Learn Apache Camel"><img src="ansible.png" alt="Learn Apache Camel"/></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/ansible/index.htm" title="Learn Ansible">
+                <img src="ansible.png" alt="Learn Ansible"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/apache_camel/index.htm" title="Learn Apache Camel">
+                    <img src="ansible.png" alt="Learn Apache Camel"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/ansible/index.htm" title="Learn Ansible">
+                <img src="ansible.png" alt="Learn Ansible"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="course-box cont">
+                <a href="/apache_camel/index.htm" title="Learn Apache Camel">
+                    <img src="ansible.png" alt="Learn Apache Camel"/>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).on('click','ul li',function(){
+    $(this).addClass('active').siblings.removeClass('active');
+  })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+</html>

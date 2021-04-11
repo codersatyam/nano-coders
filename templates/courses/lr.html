@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block queryactive %} active {% endblock queryactive %}
+{% load static %}
+{% block body %}
+<div id="list-example" class="list-group">
+  <a class="list-group-item list-group-item-action" href="/query/lr">Item 1</a>
+  <a class="list-group-item list-group-item-action" href="/query/ml">Item 2</a>
+  <a class="list-group-item list-group-item-action" href="/query/pr">Item 3</a>
+  <a class="list-group-item list-group-item-action" href="/query/dt">Item 4</a>
+</div>
+
+<div class="container">
+
+<center><h1 class="py-3">Linear Regression</h1></center><hr>
+<h2>Simple Linear Regression</h2><hr>
+<p><h5>Linear regression is one of the easiest and most popular Machine Learning algorithms. It is a statistical method that is used for predictive analysis. Linear regression makes predictions for continuous/real or numeric variables such as sales, salary, age, product price, etc.</h5>
+
+<br>
+<h5>Linear regression algorithm shows a linear relationship between a dependent (y) and one independent (y) variables, hence called as linear regression. Since linear regression shows the linear relationship, which means it finds how the value of the dependent variable is changing according to the value of the independent variable.
+
+The linear regression model provides a sloped straight line representing the relationship between the variables.</h5></p>
+<center><img src="{% static 'images/lr2.png' %}"></center>
+<br>
+<h5>y = mx + c</h5>
+<ul>
+<li><h5>y is the dependent variable i.e. the variable that needs to be estimated and predicted.</h5></li>
+<li><h5>x is the independent variable i.e. the variable that is controllable. It is the input.</h5></li>
+<li><h5>m is the slope. It determines what will be the angle of the line. It is the parameter denoted as β.</h5></li>
+<li><h5>c is the intercept. A constant that determines the value of y when x is 0.</h5></li>
+</ul>
+
+<center><img src="{% static 'images/lr1.png' %}"></center>
+
+<div class="card">
+  <div class="card-body">
+    <h2>Impoerting Libraries<h2>
+    <br>
+    <p class="card-text">
+    <div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #c586c0;">import</span>&nbsp;numpy&nbsp;<span style="color: #c586c0;">as</span>&nbsp;np</div><br><div><span style="color: #c586c0;">import</span>&nbsp;pandas&nbsp;<span style="color: #c586c0;">as</span>&nbsp;pd&nbsp;</div><br><div><span style="color: #c586c0;">import</span>&nbsp;matplotlib.pyplot&nbsp;<span style="color: #c586c0;">as</span>&nbsp;plt</div><br><div><span style="color: #c586c0;">from</span>&nbsp;&nbsp;sklearn.linear_model&nbsp;<span style="color: #c586c0;">import</span>&nbsp;LinearRegression&nbsp;</div><br><div><span style="color: #c586c0;">from</span>&nbsp;sklearn.model_selection&nbsp;<span style="color: #c586c0;">import</span> train_test_split</div></div></p>
+  </div>
+  </div>
+  
+  <div class="card mb-3">
+  
+  <div class="card-body">
+    <h2>Loading Dataset<h2>
+    <br>
+   <h3> <p class="card-text"></p><body id="tinymce" class="mce-content-body " data-id="mce_0" contenteditable="false" spellcheck="false"><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;">dataset=pd.read_csv(<span style="color: #569cd6;">r</span><span style="color: #d16969;">"W:</span><span style="color: #d7ba7d;">\M</span><span style="color: #d16969;">achine&nbsp;Learning&nbsp;A-Z&nbsp;</span><span style="color: #ce9178;">(</span><span style="color: #d16969;">Codes&nbsp;and&nbsp;Datasets</span><span style="color: #ce9178;">)</span><span style="color: #d7ba7d;">\P</span><span style="color: #d16969;">art&nbsp;2&nbsp;-&nbsp;Regression\Section&nbsp;4&nbsp;-&nbsp;Simple&nbsp;Linear&nbsp;Regression</span><span style="color: #d7ba7d;">\P</span><span style="color: #d16969;">ython\Salary_data.csv"</span>)</div></body></h3>
+    
+  </div>
+  </div>
+
+<div class="card">
+  <div class="card-body">
+    <h2>Training the simple linear regresiion model on the training set<h2>
+    <br>
+    <p class="card-text"><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div>plt.scatter(X_train,y_train,<span style="color: #9cdcfe;">color</span>=<span style="color: #ce9178;">"red"</span>)</div><div>plt.plot(X_train,regressor.predict(X_train),<span style="color: #9cdcfe;">color</span>=<span style="color: #ce9178;">"blue"</span>)</div><div>plt.title(<span style="color: #ce9178;">"linear&nbsp;regression&nbsp;model"</span>)</div><div>plt.xlabel(<span style="color: #ce9178;">"year&nbsp;of&nbsp;experience"</span>)</div><div>plt.ylabel(<span style="color: #ce9178;">"salary"</span>)</div><div>plt.show()</div></div></p>
+    </div>
+    </div>
+    
+<div class="card">
+  <div class="card-body">
+    <h2>Seeing the head section of dataset<h2>
+    <br>
+    <p class="card-text"><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;">dataset.head()</div></p>
+    </div>
+    </div>
+<div class="card">
+  <div class="card-body">
+    <h2>Spliting the dataset into independent variable and dependent variable<h2>
+    <br>
+    <p class="card-text"><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div>x=dataset.iloc[:,:-<span style="color: #b5cea8;">1</span>].values</div><div>y=dataset.iloc[:,-<span style="color: #b5cea8;">1</span>].values</div></div></p>
+    </div>
+    </div>        
+</div>
+</div>
+</div>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        
+         
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+{% endblock %}

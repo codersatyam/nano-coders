@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%block title %} Blog {% endblock title %}
+{% block blogsactive %} active {% endblock blogsactive %}
+{%block body %}
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-9">
+      <label><h1><i>CODING AND TECH BLOGS</h1></i></label>
+    </div>
+    <div class="col">
+     <a href="/blogs/own_blogs"> <button type="button" class="btn btn-primary btn-lg">Create your own BLOGS</button></a>
+    </div>
+
+
+  </div>
+</div>
+ <hr class="featurette-divider">
+{% for post in allposts %}
+<div class="container my-3">
+  <div class="jumbotron">
+  <h1 class="display-4">{{post.title}}</h1>
+  <p class="lead"> AUTHOR--{{post.author}} : {{post.date}}</p>
+  <hr class="my-4">
+  <p>{{post.content| truncatechars:100 }}</p>
+  <a class="btn btn-primary btn-lg" href="{{post.slug}}" role="button">Read more..</a>
+</div>
+  </div>
+
+{% endfor %}
+{%endblock body %}

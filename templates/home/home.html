@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+
+{%block title %} Home {% endblock title %}
+{% block homeactive %} active  {% endblock homeactive %}
+{%block body %}
+{% load static %}
+
+<style>
+  .set{
+    margin-top: 10%!important;
+  }
+</style>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active not">
+        <img src="{% static 'images/logo3.png' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+  <!--<div class="container my-4 mx-20">
+    <h1> Notifications......</h1>
+   <h2>Snake Game <a href="/blogs" class="badge badge-primary">New</a></h2>
+   <h2>Django Tutorial <a href="/blogs" class="badge badge-primary">New</a></h2>
+   <h2>Boostrap Tutorial <a href="/blogs" class="badge badge-primary">New</a></h2>
+
+    </div>
+
+  <center><h1><a href="/blogs" >BLOGS</a></h1></center>
+  <div class="container">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+  
+    <div class="jumbotron">
+    
+        <h1 class="display-4">success</h1>
+        <p class="lead"> AUTHOR--akshay : Aug. 31, 2020, 8:21 a.m.</p>
+        <hr class="my-4">
+        <p>we are at success and we do hard work for this</p>
+        <a class="btn btn-primary btn-lg" href="/blogs/fifth" role="button">Read more..</a>
+    </div>
+    
+    
+    <div class="carousel-item" data-interval="1000">
+       <img src="https://source.unsplash.com/user/erondu/1800x500/?tech,earth" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="1000">
+      <img src="https://source.unsplash.com/user/erondu/1800x500/?tech,earth" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    <a href="/blogs"><button type="button" class="btn btn-primary btn-lg btn-block">VIEW MORE....</button></a>
+    </div>
+  <div class="container my-4">
+    <center><h2><a href="/tutorials">TUTORIALS</a> </h2></center>
+    <div class="col-lg-12">
+      <div class="container text-left">
+        <div class="row justify-content-center">
+      <div class="col-lg-6 col-sm-12 col-md-12 col-12">
+        <div class="card shadow">
+            <div class="card-title mx-3 py-2">
+               Web Development
+            </div> 
+             <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                       <a href="htmldoc.html"><img class="img-fluid" src="{%static 'images/html.png'%}" alt="image"><p>HTML</p></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{% static 'images/css.png' %}" alt="image"><p>CSS</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                      <a href="#"><img class="img-fluid" src="{%static 'images/Javascript.png'%}" alt="image"><p>JavaScript</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/php.png'%}" alt="image"><p>PHP</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                      <a href="#"><img class="img-fluid" src="{%static 'images/MySQL.png'%}" alt="image"><p>MySQL</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/angularjs4.png'%}" alt="image"><p>AngularJS4</p></a>
+                  </div>
+                </div>
+      
+            </div>
+        </div>
+        <span>
+        <a href="/tutorials/moretutorials1"class="card-link float-right px-1">view more</a>
+        </span>
+      </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-md-12 col-12">
+        <div class="card shadow">
+            <div class="card-title mx-3 py-2">
+               Web Development
+            </div> 
+             <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                       <a href="/tutorials/htmldoc"><img class="img-fluid" src="{%static 'images/html.png'%}" alt="image"><p>HTML</p></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{% static 'images/css.png' %}" alt="image"><p>CSS</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                      <a href="#"><img class="img-fluid" src="{%static 'images/Javascript.png'%}" alt="image"><p>JavaScript</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/php.png'%}" alt="image"><p>PHP</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                     {% load static %}
+                      <a href="#"><img class="img-fluid" src="{%static 'images/MySQL.png'%}" alt="image"><p>MySQL</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/angularjs4.png'%}" alt="image"><p>AngularJS4</p></a>
+                  </div>
+                </div>
+      
+            </div>
+        </div>
+        <span>
+        <a href="/tutorials/moretutorials2"class="card-link float-right px-1">view more</a>
+        </span>
+      </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-md-12 col-12">
+        <div class="card shadow">
+            <div class="card-title mx-3 py-2">
+               Web Development
+            </div> 
+             <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                       <a href="htmldoc.html"><img class="img-fluid" src="{%static 'images/html.png'%}" alt="image"><p>HTML</p></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{% static 'images/css.png' %}" alt="image"><p>CSS</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                      <a href="#"><img class="img-fluid" src="{%static 'images/Javascript.png'%}" alt="image"><p>JavaScript</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/php.png'%}" alt="image"><p>PHP</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                     {% load static %}
+                      <a href="#"><img class="img-fluid" src="{%static 'images/MySQL.png'%}" alt="image"><p>MySQL</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/angularjs4.png'%}" alt="image"><p>AngularJS4</p></a>
+                  </div>
+                </div>
+      
+            </div>
+        </div>
+        <span>
+        <a href="/tutorials/moretutorials3"class="card-link float-right px-1">view more</a>
+        </span>
+      </div>
+      </div>
+      
+      <div class="col-lg-6 col-sm-12 col-md-12 col-12">
+        <div class="card shadow">
+            <div class="card-title mx-3 py-2">
+               Web Development
+            </div> 
+             <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                       <a href="htmldoc.html"><img class="img-fluid" src="{%static 'images/html.png'%}" alt="image"><p>HTML</p></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{% static 'images/css.png' %}" alt="image"><p>CSS</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                      <a href="#"><img class="img-fluid" src="{%static 'images/Javascript.png'%}" alt="image"><p>JavaScript</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/php.png'%}" alt="image"><p>PHP</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">  
+                     {% load static %}
+                      <a href="#"><img class="img-fluid" src="{%static 'images/MySQL.png'%}" alt="image"><p>MySQL</p></a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                  <div class="photo-box">
+                      <a href="#"><img class="img-fluid" src="{%static 'images/angularjs4.png'%}" alt="image"><p>AngularJS4</p></a>
+                  </div>
+                </div>
+      
+            </div>
+        </div>
+        <span>
+        <a href="/tutorials/moretutorials4"class="card-link float-right px-1">view more</a>
+        </span>
+      </div>
+      </div>
+           
+      
+      
+      
+          </div>
+        </div>
+      </div>
+      
+   </div>
+
+  <div class="container my-4">
+    <center><h2><a href="/projects">PROJECTS</a> </h2></center>
+    <div class="col-lg-12">
+   
+      <section class="header-section">
+        <div class="centre-div set">
+              <div class="header-buttons">
+                  <a href="/projects/python"><img src="{% static 'images/python.png' %}" alt="Avatar"></a>
+                  <a href="/projects/java"><img src="{% static 'images/java.png' %}" alt="Avatar"></a>
+                  <a href="/projects/c++"><img src="{% static 'images/C++.png' %}" alt="Avatar"></a>
+
+              </div>
+        </div>
+
+    </section>
+
+   </div>
+  </div>
+{% if check is not None %}
+<div class="container col-3">
+<button type="button" class="btn btn-dark">{{check}}</button>
+</div>
+{% endif %}
+-->
+<br>
+<div class="container">
+<hr>
+<h1>UPCOMING FEATURES....</h1>
+<hr>
+<ul>
+<li><h2>QUIZS</h2></li>
+<li><h2>NOTES</h2></li>
+<li><h2>VIDEO CONTENT<h2></li>
+<li><h2>ML WORLD<h2></li>
+
+
+</div>
+<br>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+<div class="pp col-12 text-center">
+  <h1 class="effect"><em>Tuto</em>rials&#9<em>Jun</em>ction&#9</h1>
+</div>
+    </div>
+</div>
+<hr>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-6 col-12">
+    <div class="card pre" style="width:80%;">
+      <img src="{% static 'images/dirty data.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+      <div class="card-body">
+        <div class="card-footer">
+        <small class="text-muted"><h1><a href="/query/preprocessing">Data Preprocessing</a></h1></small>
+      </div>
+    </div>
+  </div>    
+  </div>
+
+  <div class="col-lg-6 col-12">
+    <div class="card pre" style="width:80%;">
+      <img src="{% static 'images/dirty data.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+      <div class="card-body">
+        <div class="card-footer">
+        <small class="text-muted"><h1><a href="/query/introduction">Python</a></h1></small>
+      </div>
+    </div>
+  </div>    
+  </div>   
+
+    <div class="col-lg-6 col-12">
+    <div class="card pre" style="width:80%;">
+      
+        <img src="{% static 'images/dirty data.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+        <div class="card-body">
+          <div class="card-footer">
+          <small class="text-muted"><h1><a href="/query/preprocessing">Machine Learning</a></h1></small>
+        </div>
+      </div>
+    </div>    
+    </div>
+
+    <div class="col-lg-6 col-12">
+      <div class="card pre" style="width:80%;">
+        <img src="{% static 'images/dirty data.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+        <div class="card-body">
+          <div class="card-footer">
+          <small class="text-muted"><h1><a href="/query/preprocessing">Deep Learning</a></h1></small>
+        </div>
+      </div>
+    </div>    
+    </div>
+  
+
+
+</div>
+    </div>
+{% endblock body %}
