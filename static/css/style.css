@@ -447,11 +447,12 @@ h2 img{
             margin-right:4%;
             padding: 1px 16px;
             height: 100vh;
+            margin-bottom:10vh;
           }
            #sidebarCollapse{
               display:none;
             }
-          
+            
             .arrow {
               position: absolute;
               bottom:-19%;
@@ -555,6 +556,6 @@ h2 img{
             }
             div.content{
               margin-left:0;
-              margin-bottom:20vh;
+              margin-bottom:50vh;
             }
             }

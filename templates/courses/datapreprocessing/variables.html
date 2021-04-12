@@ -2,6 +2,15 @@
 {% block queryactive %} active {% endblock queryactive %}
 {% load static %}
 {% block body %}
+<style>
+
+    .arrow {
+              bottom:-255%;
+            }
+            div.content {
+            margin-bottom: 15vh;
+          }
+</style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <div class="wrapper" id="top" style="height:100%;">
@@ -28,7 +37,7 @@
     </ul>
   </nav>
  
- <div class="content" data-spy="scroll" data-target="#sidebar" data-offset="0" style="height:100%;">
+ <div class="content" data-spy="" data-target="#sidebar" data-offset="0" style="height:100%;">
   <nav class="navbar navbar-expand lg navbar-light">
     <div class="container">
       <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -109,7 +118,6 @@
 <hr>
 <br>
 <h5>The variable which conatains number and categories called as Mixed variable.</h5>
-</div>
  <ul class="arrow">
   <a href="/query/steps"><li class="prev"><span></span></li></a>
   <a href="/query/missingdata"><li class="next"><span></span></li></a>

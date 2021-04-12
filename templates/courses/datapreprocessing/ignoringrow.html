@@ -2,6 +2,20 @@
 {% block queryactive %} active {% endblock queryactive %}
 {% load static %}
 {% block body %}
+<style>
+   .arrow {
+              bottom:-82%;
+            }
+    div.content {
+            margin-bottom: 68vh;
+          }
+    @media screen and (max-width: 768px) {
+    div.content{
+              margin-left:0;
+              margin-bottom:130vh;
+            }
+          }
+</style>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -64,16 +78,25 @@
    <h5>import numpy as np</h5>
  <h5>import pandas as pd</h5>
   </div>
-</div>
- 
- <br>
- <h3>STEP 2</h3>
- <hr>
- <h4>Call the dataset on which you have to work</h4>
- <h5>
  </div>
+
+ <button type="button" class="btn btn-primary btn-lg">STEP 1</button>
+ <br>
+ <br>
+ <h4>importing libraries that are require</h4>
+ <br>
+
+ <button type="button" class="btn btn-dark btn-lg">CODE</button>
+ <div class="card ingnoringrow">
+  <div class="card-body">
+   <h5>import numpy as np</h5>
+ <h5>import pandas as pd</h5>
+  </div>
 </div>
+  </div>
+  </div>
 </div>
+
 
 <ul class="arrow">
   <a href="/query/missingdata"><li class="prev"><span></span></li></a>
