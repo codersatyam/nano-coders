@@ -54,4 +54,29 @@ def steps(request)     :
 def dpa(request)     :
      return render(request,'courses/deeplearning/dpa.html') 
 def introduction(request)     :
-     return render(request,'courses/python/introduction.html')                                                                                  
+     return render(request,'courses/python/introduction.html')
+def pvariables(request)     :
+     return render(request,'courses/python/variables.html')                                                                                  
+def ptype(request)     :
+     return render(request,'courses/python/typeconversion.html')                                                                                  
+def poperators(request)     :
+     return render(request,'courses/python/operators.html')                                                                                  
+def pconditional(request)     :
+     return render(request,'courses/python/ifelse.html')                                                                                  
+def ploop(request)     :
+     return render(request,'courses/python/loops.html')                                                                                  
+def pinput(request)     :
+     return render(request,'courses/python/input.html')                                                                                  
+def pstring(request)     :
+     return render(request,'courses/python/string.html')                                                                                  
+def plist(request)     :
+     return render(request,'courses/python/list.html')                                                                                  
+def pdictonary(request)     :
+     return render(request,'courses/python/dictonary.html')                                                                                  
+def ptuples(request)     :
+     return render(request,'courses/python/tuple.html')                                                                                  
+def pset(request)     :
+     return render(request,'courses/python/set.html')                                                                                  
+def pfunctions(request)     :
+     return render(request,'courses/python/functions.html')                                                                                  
+
