@@ -401,15 +401,8 @@ h2 img{
             background-color: #7386D5;
             position:absolute;
             color:#fff;
-<<<<<<< HEAD
-            height: 110%;
-            z-index:0;
-=======
             height: 100%;
-            z-index:0;
-
->>>>>>> 5ff8a3e2db5fdeaace9c7c74caaeb3f71fe47f15
-           
+            z-index:0;      
           }
 
           #sidebar .sidebar-header
