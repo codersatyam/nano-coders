@@ -563,3 +563,9 @@ h2 img{
               margin-bottom:50vh;
             }
             }
+        .paass i{
+        position: absolute;
+         margin-left: 446px;
+         margin-top:-26px;
+         cursor: pointer;
+        }
