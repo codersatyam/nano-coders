@@ -181,13 +181,13 @@ div.content {
       <h3>PYTHON</h3>
     </div>
     <ul class="lisst-unstyled components">
-      <li class="active">
+      <li class="">
         <a href="/query/introduction">INTRODUCTION </a>
       </li>
       <li class="">
         <a href="/query/pvariable">VARIABLES</a>
       </li>
-      <li class="">
+      <li class="active">
         <a href="/query/ptype">TYPE CONVERSION</a>
       </li>
       <li class="">
@@ -233,17 +233,36 @@ div.content {
     </div>
   </nav>
 <!-- <img src="{% static 'images/Dirty Data.png' %}"> -->
-<center><h1><heading>PYTHON INTRODUCTION<heading></h1></center>
+<center><h1><heading> TYPE CONVERSION<heading></h1></center>
 <hr>
 <br>
-<h2>What is Data Preprocessing ?</h2>
+<h2>Type Matters</h2>
 <hr>
 <br>
-<h5>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, lacking in certain behaviors or trends, and is likely to contain many errors.</h5>
+<ul>
+<li><h5>Python khnows what <b>"type"</b>everything is.</h5></li>
 <br>
-<h5>Data preprocessing is a proven method of resolving such issues. Data preprocessing prepares raw data for further processing.</h5>
+<li><h5>Some operations are prohibited.<h5></li>
 <br>
-<h5>In Machine Learning (ML) processes, data preprocessing is critical to encode the dataset in a form that could be interpreted and parsed by the algorithm</h5>
+<li>
+<h5>You cannot "add int" to a string.</h5><li>
+<br>
+<li><h5>We can ask python what type something is by using type <b>type()</b> function.</h5></li>
+</ul>
+<br>
+<p><pre><h5>>>variable ="hello"+"world"
+<br>
+>>>variable=variable+1
+<br>
+<b>error (traceback)</b>
+<br>
+>>>type(variable)
+<br>
+<<class "str">>
+<br>
+</h5></pre></p>
+
+
 </div>
 
 
