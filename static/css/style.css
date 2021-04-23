@@ -399,10 +399,10 @@ h2 img{
             padding: 0;
             width: 250px;
             background-color: #7386D5;
-            position:absolute;
+            position:fixed;
             color:#fff;
-            height: 110%;
-            z-index:0;      
+            height:110%;
+            z-index:999;
           }
 
           #sidebar .sidebar-header
@@ -412,7 +412,7 @@ h2 img{
           
             }
             #sidebar ul.components{
-              padding: 18px 0;
+              padding: 8px 0;
               border-bottom: 1px solid #47748b;
             }
             #sidebar ul p{
