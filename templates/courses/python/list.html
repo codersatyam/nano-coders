@@ -85,7 +85,422 @@
 <br>
 <h2>LIST CONSTANTS</h2>
 <hr>
+<li><h5> List constants are surrounded by square brackets and the elements in the list are seperated by commas.</h5></li>
+<br>
+<li><h5>A list element cna be any pyton  object, ever another list.</h5></li>
+<br>
+<li><h5>A list can be empty.</h5></li>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>>>>print([1,24,76])</h5>
+<h5>[1,24,76]</h5>
+<h5>>>>print(['red','yellow','green'])</h5>
+<h5>['red','yellow','green']</h5>
+<h5>>>>print(['red',1,2])</h5>
+<h5>['red',1,2]</h5>
+<h5>>>>print([1,[5,6],7])</h5>
+<h5>[1,[5,6],7]</h5>
+<h5>>>>print([])</h5>
+<h5>[]</h5>
 
+  </div>
+  </div>
+<h2>Looking Inside lists</h2>
+<hr>
+<h5>Just like string , we can get at any single element in a lsit using an index specified in square bracket.</h5>
+<img src=" ">
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>>nums=[25,12,34,95,14]</h5>
+    <h5>>>>nums[4]</h5>
+    <h5> 14</h5>
+    <h5>>>>nums[-2]</h5>
+    <h5>95</h5>
+    </p>
+</div>
+</div>
+<h2>List can be sliced</h2>
+<hr>
+<h5>The second number is upto but not including</h5>
+<img src="">
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>>nums[1:3]</h5>
+    <h5>[12,26]</h5>
+    <h5>>>> nums[2:]</h5>
+    <h5>[34,95,14]</h5>
+    </p>
+    </div>
+    </div>
+    <h2>Lists are <b>Mutable</b></h2>
+    <h5>String are <b>"Immutable"</b>- we cannot change the contents ofn a string , we must make a new string to amke any changes.</h5>
+    <br>
+    <h5>Lists are <b>"Mutable"</b>.We can change any element of a lsit using the index operator.</h5>
+    <div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>>fruit="banana"</h5>
+    <h5>>>>fruit[0]='c'</h5>
+    <h5><b>Traceback</b></h5>
+    <h5>>>>nums=[2,14,16,41,63]</h5>
+    <h5>>>>print(nums)</h5>
+    <h5>[2,14,16,41,63]</h5>
+    <h5>>>>nums[1]=4</h5>
+    <h5>>>>print(nums)</h5>
+    <h5>[2,4,26,41,63]</h5>
+    </p>
+    </div>
+    </div>
+<h2>Concatenating list using <b> + </b>/ Joining lists</h2>
+<hr>
+<h5>We can create a new list by adding two existing lists together.</h5>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>>a=[1,2,3]</h5>
+    <h5>>>>b=[4,5,6]</h5>
+    <h5>>>>c=a+b</h5>
+    <h5>>>>print(c)</h5>
+    <h5>[1,2,3,4,5,6]</h5>
+    <h5>print(a)</h5>
+    <h5>[1,2,3]</h5>
+    </p>
+    </div>
+    </div>    
+  <h3>Another way for joining two lists</h3>
+  <div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>.c=[a,b]  </h5>
+    <h5>[1,2,3,4,5,6]</h5>
+    </p>
+    </div>
+    </div>
+<h2>Different operations of list</h3>
+<hr>
+<br>
+<h3><b>1. append<b></h3>
+<h5>To add a new value in a list.</h5>
+<h5>The list stays in order and new element are added at the end of the list.</h5>
+<br>
+<h3>Syntax - <h5>list.append()</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>nums=[1,2,3,4]</h5>
+<h5>nums.append(6)</h5>
+<h5>print(nums)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text"><h5>[1,2,3,4,6]</h5></p>
+  </div>
+</div>
+</div>
+<br> 
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>
+<h3><b>3. upper()<b></h3>
+<h5>This function will conert the string into uppercase.</h5>
+<br>
+<h3>Syntax - <h5>len(string_name)</h5></h3>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>s="Nano coder"</h5>
+<h5>x=s.upper()</h5>
+<h5>print(x)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">NANO CODER</p>
+  </div>
+</div>
+</div>
+<br>  
 </div>
 
 
