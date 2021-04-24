@@ -4,11 +4,15 @@
 {% block body %}
 <style>
    .arrow {
-              bottom:-82%;
+              bottom:-78%;
             }
-    div.content {
-            margin-bottom: 68vh;
-          }
+  
+   #sidebar{
+     height:162.5vh;
+   }
+   div.content{
+     height: 100%;
+   }
     @media screen and (max-width: 768px) {
     div.content{
               margin-left:0;
@@ -34,8 +38,6 @@
       </li>
       <li class="">
         <a href="/query/variables">VARIABLES</a>
-        
-  
       </li>
       <li class="">
         <a href="/query/missingdata">Data Cleaning</a>
@@ -55,8 +57,7 @@
         </button>
     </div>
   </nav>
-
-  <div class="container">
+  
   <br>
 <center> <h1><heading>Ignoring missing value rows/delete rows</heading></h1></center>
  <hr>
@@ -74,10 +75,10 @@
  
  <button type="button" class="btn btn-dark btn-lg">CODE</button>
  <div class="card ingnoringrow">
-  <div class="card-body">
-  <h5>import numpy as np</h5>
-  <h5>import pandas as pd</h5>
-  </div>
+    <div class="card-body">
+      <h5>import numpy as np</h5>
+      <h5>import pandas as pd</h5>
+    </div>
  </div>
 
  <button type="button" class="btn btn-primary btn-lg">STEP 1</button>
@@ -88,20 +89,18 @@
 
  <button type="button" class="btn btn-dark btn-lg">CODE</button>
  <div class="card ingnoringrow">
-  <div class="card-body">
-   <h5>import numpy as np</h5>
- <h5>import pandas as pd</h5>
-  </div>
+    <div class="card-body">
+      <h5>import numpy as np</h5>
+      <h5>import pandas as pd</h5>
+    </div>
 </div>
-  </div>
-  </div>
 </div>
-
 
 <ul class="arrow">
   <a href="/query/missingdata"><li class="prev"><span></span></li></a>
   <a href="/query/preprocessing"><li class="next"><span></span></li></a>
 </ul>
+<div>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

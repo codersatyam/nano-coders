@@ -376,7 +376,9 @@ h2 img{
 
 
 /*Data preprocessing*/
-
+div.content{
+    display: inline-block;
+}
         .pre{
             border-radius: 3%!important;
             border:3px solid rgb(0,0,0)!important;
@@ -395,6 +397,7 @@ h2 img{
             transition:0.2s;
         }
 
+
         #sidebar {
             margin: 0;
             padding: 0;
@@ -402,8 +405,7 @@ h2 img{
             background-color: #7386D5;
             position:absolute;
             color:#fff;
-            height:110%;
-            z-index:999;
+            height:112vh;
           }
 
           #sidebar .sidebar-header
@@ -452,7 +454,8 @@ h2 img{
             margin-right:4%;
             padding: 1px 16px;
             height: 100vh;
-            margin-bottom:10vh;
+            margin-bottom:12vh;
+            position: relative;
           }
            #sidebarCollapse{
               display:none;
@@ -466,6 +469,7 @@ h2 img{
               margin: 0;
               padding: 0;
               display: flex;
+
             }
             .arrow li{
               list-style: none;
