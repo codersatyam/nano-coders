@@ -94,18 +94,82 @@
 <li><h5>We can ask python what type something is by using type <b>type()</b> function.</h5></li>
 </ul>
 <br>
-<p><pre><h5>>>variable ="hello"+"world"
-<br>
->>>variable=variable+1
-<br>
-<b>error (traceback)</b>
-<br>
->>>type(variable)
-<br>
-(CLASS )
-<br>
-</h5></pre></p>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>variable ="hello"+"world"</h5>
+    <h5>>>>variable=variable+1</h5>
+    <h5><b>error (traceback)</b></h5>
+    <h5>>>>type(variable)</h5>
+    <h5>(class 'str')</h5>
+    <h5>>>>type('hello')</h5>
+    <h5>(class 'str')</h5>
+    <h5>>>>type(1)</h5>
+    <h5>(class 'int')</h5>
+    </p>
+    </div>
+    </div>    
+ <br>
+ <hr>
+ <h2>Type Conversion</h2>
+ <hr>
+ <br>
+ <h5>When you put an integer and float in an expression, the integer is <b>implicitly</b> conerted to a float.</h5>
+ <br>
+ <h5>We can control this with the built in functions <b>int()</b> and <b>float()</b>.</h5>
+ <br>
+ <div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>i=32</h5>
+    <h5>>>>type(i)</h5>
+    <h5>(class 'int')</h5>
+    <h5>>>>f=float(i)</h5>
+    <h5>>>>print(f)</h5>
+    <h5>42.0</h5>
+    <h5>type(f)</h5>
+    <h5>(class 'float')</h5>
+    </p>
+    </div>
+    </div>   
+ <br>
+ <hr>
+  <h2>String Conversion</h2>
+ <hr>
+ <br>
+ <h5>You can also use int()  and float() to convert between strings and integers.</h5>
+ <br>
+ <h5>You will get an error if the string does not contain numeric characters.</h5>
+ <br>
+ <div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>>>s="1234"</h5>
+    <h5>>>>type(s)</h5>
+    <h5>(class 'str')</h5>
+    <h5>>>>print(s+1)</h5>
+    <h5><b>error</b></h5>
+    <h5>>>>new_s=int(s)</h5>
+    <h5>>>>type(new_s)</h5>
+    <h5>(class 'int')</h5>
+    <h5>>>>print(s+1)</h5>
+    <h5>1235</h5>
+    <h5>>>>new_string='Nano coder'</h5>
+    <h5>>>>new_str=int(new_string)</h5>
+    <h5><b>error</b>
 
+    </p>
+    </div>
+    </div>   
 
 </div>
 
