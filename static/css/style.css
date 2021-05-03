@@ -376,6 +376,10 @@ h2 img{
 
 
 /*Data preprocessing*/
+/* .wrapper{
+    margin-bottom: 90%;
+} */
+
 div.content{
     display: inline-block;
 }
@@ -402,10 +406,12 @@ div.content{
             margin: 0;
             padding: 0;
             width: 250px;
-            background-color: #7386D5;
-            position:absolute;
+            background-color:#6d7fcc;
+            position:fixed;
             color:#fff;
-            height:112vh;
+            height:120vh!important;
+            overflow: auto;
+            padding-bottom: 30%;
           }
 
           #sidebar .sidebar-header
@@ -423,6 +429,7 @@ div.content{
               padding: 10px;
             }
             #sidebar ul li a{
+                
               padding: 10px;
               font-size:1.1em;
               display: block;
