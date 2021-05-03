@@ -79,6 +79,8 @@
 <br>
 <h5>The <b> input()</b> function returns a <b>'string'</b>.</h5>
 <br>
+<h5>Single cote or double cote both work in <b>input()</b> function.</h5>
+<br>
 <div class="card">
   <div class="card-header">
    <h3> Example<h3>
@@ -97,6 +99,123 @@
     <h5><b> user give input as I give <b> nano coder</b></b></h5>
     <h5>welcome nano coder</h5>
     </p>
+  </div>
+</div>
+</div>
+<br>
+<h2>Converting User Input</h2>
+<hr>
+<br>
+<h5>If we want to read a number  from the user . We must convert it from a string to a number using a type conversion function.</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=input('enter first number')</h5>
+<h5>a=int(x)</h5>
+<h5>y=input('enter second number')</h5>
+<h5>b=int(y)</h5>
+<h5>z=a+b</h5>
+<h5>print(z)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Enter first number 10</h5>
+    <h5>Enter second number 12</h5>
+    <h5>22</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h3>Another way</h3>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=int(input('Enter first number')) </h5>
+<h5>y=int(input('Enter second number'))</h5>
+<h5>z=x+y</h5>
+<h5>print(z)</h5>
+  </div>
+<div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Enter first number 10</h5>
+    <h5>Enter second number 12</h5>
+    <h5>22</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<hr>
+<h2>Methods of taking multiple inputs</h2>
+<hr>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 1<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x,y,z=input(),input(),input()</h5>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 2<h3>
+   <h4>Using list comphrension</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x,y,z=[int(x) for x in input().split()]</h5>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 3<h3>
+   <h4>Using map function</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x,y,z=map(int,input().split())</h5>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 4<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x,y=input('Enter two characters seprated by space').split()</h5>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 5<h3>
+   <h4>Using loop</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=input('Enter the total no:')</h5>
+<h5>for i in range(x)</h5>
+<h5>input()</h5>
   </div>
 </div>
 </div>

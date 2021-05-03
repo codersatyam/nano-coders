@@ -73,17 +73,312 @@
     </div>
   </nav>
 <!-- <img src="{% static 'images/Dirty Data.png' %}"> -->
-<center><h1><heading>PYTHON INTRODUCTION<heading></h1></center>
+<center><h1><heading>LOOPS<heading></h1></center>
 <hr>
 <br>
-<h2>What is Data Preprocessing ?</h2>
+<h5>Use for repeate a particular piece of statement in our program.</h5>
+<br>
+<hr>
+<h2>1. <b> while loop</b></h2>
 <hr>
 <br>
-<h5>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, lacking in certain behaviors or trends, and is likely to contain many errors.</h5>
+<h5>While loop for certain reteration or conditions</h5>
 <br>
-<h5>Data preprocessing is a proven method of resolving such issues. Data preprocessing prepares raw data for further processing.</h5>
+<h5>In while loop we require <b>'indentation'</b>.</h5>
 <br>
-<h5>In Machine Learning (ML) processes, data preprocessing is critical to encode the dataset in a form that could be interpreted and parsed by the algorithm</h5>
+<h4>Steps</h4>
+<h5>1. Take a conter or variable</h5>
+<h5>2. Check the given condition</h5>
+<h5>3. Increment the value</h5>
+<br>
+<h4>Syntax -</h4>
+<h5> while <span>condition</span>:</h5>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>i=1</h5>
+<h5>while i<=5:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Nanocoder')</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=i+1</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Nanocoder</h5>
+    <h5>Nanocoder</h5>
+    <h5>Nanocoder</h5>
+    <h5>Nanocoder</h5>
+    <h5>Nanocoder</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<hr>
+<h2>Nested while loop</h2>
+<hr>
+<br>
+<h5>Nested loop means a loop statement inside another loop statement.</h5>
+<br>
+<h5>For nested while loop we require different variables for every loop.</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>i=1</h5>
+<h5>while i<=3:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Nanocoder',end=" ")</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j=1</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while j<=2:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("rocks",end=" ")</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j=j+1</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=i+1</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print()</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Nanocoder rocks rocks</h5>
+    <h5>Nanocoder rocks rocks</h5>
+    <h5>Nanocoder rocks rocks</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h3>Some key points</h3>
+<hr>
+<br>
+<h5>We use j variable before starting inner loop because every time we want j start from 1 when comes out from inner loop.</h5>
+<br>
+<h5>We use <b>'end'</b> so that ineer loop come in same line .</h5>
+<br>
+<h5>We use<b>'end'</b> in ineer loop so that all rocks come in same line .</h5>
+<br>
+<h5>In last we use <b>print()</b> so, that after completing one outer loop we come in next line.</h5>
+<br>
+<hr>
+<h2>2. <b> for loop</b></h2>
+<hr>
+<br>
+<h5> <b>for </b>loop work with sequence</h5>
+<br>
+<h5>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 1<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=['Nanocoder',65,2.5]</h5>
+<h5>for i in x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Nanocoder</h5>
+    <h5>65</h5>
+    <h5>2.5</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h3>Some key points</h3>
+<hr>
+<br>
+<h5>In this i is a iterable variable.</h5>
+<br>
+<h5> <b> i </b> variable refers to a each element in a list or in a string.</h5>
+<br>
+<h5> In place of x we can put directly list, string,tuple,set.</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 2<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=nanocoder</h5>
+<h5>for i in x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>N</h5>
+    <h5>a</h5>
+    <h5>n</h5>
+    <h5>o</h5>
+    <h5>c</h5>
+    <h5>o</h5>
+    <h5>d</h5>
+    <h5>e</h5>
+    <h5>r</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<hr>
+<h2>3. <b> for else</b></h2>
+<hr>
+<br>
+<h5>We use <b>for else</b> loop when our for loop will not give any output then else part will execute which shows that our for loop will not giv eany output .</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example <h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=[12,16,18,21,26,56]</h5>
+<h5>for i in x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if i%5==0:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)</h5>
+<h5>else:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Not Found')</h5>
+
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Not Found</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h2><center><b>BREAK , CONTINUE and PASS</b></center></h2>
+<hr>
+<br>
+<h2>1. <b> break</b></h2>
+<hr>
+<br>
+<h5> We use <b>break</b> to just come out of the loop.</h5>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 1<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=int(input('Enter the no of candies'))</h5>
+<h5>i=1</h5>
+<h5>while i<=x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('candy')</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=i+1</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Enter the no of candies 5</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    </p>
+  </div>
+</div>
+</div>
+<h5><b>Note- </b> In the above example user can take any no of candy. But now the situation is come that we have a fix no of candy but user enter more candy to the available then we use <b>'break'</b></h5>
+<div class="card">
+  <div class="card-header">
+   <h3> Example 2<h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <h5>available=3</h5>
+<h5>x=int(input('Enter the no of candies'))</h5>
+<h5>i=1</h5>
+<h5>while i<=x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if i>available:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('candy')</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=i+1</h5>
+<h5>print('By')</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>Enter the no of candies 10</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    <h5>candy</h5>
+    <h5>By</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h2>2. <b> continue</b></h2>
+<hr>
+<br>
+<h5> It is not come out to the loop .It is just skip the value or statement.</h5>
+<div class="card">
+  <div class="card-header">
+   <h3> Example <h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>x=[1,2,3,4,5,6,7]</h5>
+<h5>for i in x:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if i%2==0:</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)</h5>
+  </div>
+  <div class="card">
+  <h3 class="card-header">Output</h3>
+  <div class="card-body">
+   
+    <p class="card-text">
+    <h5>1</h5>
+    <h5>3</h5>
+    <h5>5</h5>
+    <h5>7</h5>
+    </p>
+  </div>
+</div>
+</div>
+<br>
+<h2>3. <b> pass</b></h2>
+<hr>
+<br>
+<h5>If you want to skip the function or block you can use pass.</h5>
+<div class="card">
+  <div class="card-header">
+   <h3> Example <h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+<h5>def fun():</h5>
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass</h5>
+  </div>
+  </div>
+  <h5>We pass the function means no use in our code during compling. </h5>
 </div>
 
 
