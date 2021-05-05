@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ML World{% endblock title %}
+{% block mlactive %} active {% endblock mlactive %}
+
+{% block body %}
+<br>
+<br>
+<h2><center>HOUSE PRICE PREDICTION</center></h2>
+<hr>
+<br>
+<div class="conainer">
+<img src="..." class="rounded float-end" alt="...">
+<form method="POST" action="/blogs/make">
+    <div class="form-group">
+    <center><h2> <label for="title">title</label></h2></center>
+    <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+    <center><h2><label for="content">Content</label></h2></center>
+    <textarea class="form-control" id="content"  name="content" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+    <center><h2><label for="slug">Blog ID</label></h2></center>
+    <input type="text" class="form-control" id="slug" name="slug" required>
+    </div>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+{% endblock body%}

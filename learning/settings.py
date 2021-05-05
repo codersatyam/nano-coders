@@ -51,6 +51,7 @@ INSTALLED_APPS = [
      'projects.apps.ProjectsConfig',
      'tools.apps.ToolsConfig',
      'buy.apps.BuyConfig',
+     'ml.apps.MlConfig',
      'django.contrib.humanize'
 ]
 

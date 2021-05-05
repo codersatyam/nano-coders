@@ -26,6 +26,7 @@ urlpatterns = [
     path('buy/', include("buy.urls")),
     path('tools/', include("tools.urls")),
     path('query/', include("query.urls")),
+    path('ml/', include("ml.urls")),
     
    
 
