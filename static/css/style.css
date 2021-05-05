@@ -405,13 +405,13 @@ div.content{
         #sidebar {
             margin: 0;
             padding: 0;
-            width: 265px;
+            width: 250px;
             background-color:#6d7fcc;
             position:fixed;
             color:#fff;
-            height:120vh!important;
+            height:120vh;
             overflow: auto;
-            padding-bottom: 30%;
+            padding-bottom:30%;
           }
 
           #sidebar .sidebar-header
@@ -558,6 +558,7 @@ div.content{
               position: relative;
               margin-top:-368px;
               text-align: center;
+              padding:0!important;
             }
           
             #sidebarCollapse{
