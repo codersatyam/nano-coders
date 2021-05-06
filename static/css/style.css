@@ -376,13 +376,13 @@ h2 img{
 
 
 /*Data preprocessing*/
-/* .wrapper{
-    margin-bottom: 90%;
-} */
-
-div.content{
-    display: inline-block;
+.wrapper{
+    display: flex;
 }
+
+/* div.content{
+    display: inline-block;
+} */
         .pre{
             border-radius: 3%!important;
             border:3px solid rgb(0,0,0)!important;
@@ -405,13 +405,9 @@ div.content{
         #sidebar {
             margin: 0;
             padding: 0;
-            width: 250px;
             background-color:#6d7fcc;
-            position:fixed;
             color:#fff;
-            height:120vh;
-            overflow: auto;
-            padding-bottom:30%;
+            min-width: 250px;
           }
 
           #sidebar .sidebar-header
@@ -457,12 +453,10 @@ div.content{
             }
           /*Page content. The value of the margin-left property should match the value of the sidebar's width property*/
           div.content {
-            margin-left: 250px;
             margin-right:4%;
             padding: 1px 16px;
-            height: 100vh;
-            margin-bottom:12vh;
             position: relative;
+            margin-bottom: 8%;      
           }
            #sidebarCollapse{
               display:none;
@@ -470,7 +464,7 @@ div.content{
             
             .arrow {
               position: absolute;
-              bottom:-16%;
+              bottom:-12%;
               left: 50%;
               transform: translate(-50%,-50%);
               margin: 0;
@@ -557,6 +551,7 @@ div.content{
               height: auto;
               position: relative;
               margin-top:-368px;
+              margin-left:-380px ;
               text-align: center;
               padding:0!important;
             }
@@ -567,18 +562,23 @@ div.content{
             .arrow{
               display: none;
             }
-            
+            .wrapper{
+                display:block;
+            }
             #sidebar.active{
               margin-top:0!important;
+              margin-left: 0;
             }
             div.content{
               margin-left:0;
-              margin-bottom:50vh;
+              margin-bottom:10%!important;
+              
             }
-            }
+        }
         .paass i{
         position: absolute;
          margin-left: 446px;
          margin-top:-26px;
          cursor: pointer;
         }
+    
