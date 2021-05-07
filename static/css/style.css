@@ -141,6 +141,21 @@ h1 em
         text-align: center!important;
         font-size:26px;
     }
+    .nav-item {
+        text-align: center!important;
+    }
+    .photo-box{
+        margin-left: 35px;
+    }
+    html,body{
+    overflow-x: hidden;}
+
+    .media img{
+        margin-top:12%!important;
+    }
+    .icons{
+        display: none!important;
+    }
 }
 
 @media (min-width:541px)and(max-width: 768px) {
