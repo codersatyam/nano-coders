@@ -80,8 +80,8 @@ li{list-style: none;}
 
 .pp{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
     min-height:18vh;
     background: #000;
 }
@@ -97,7 +97,6 @@ li{list-style: none;}
     animation: animate 1s steps(30);
     white-space: nowrap;
     width: 30ch;
-
 }
 @keyframes animate
 {
@@ -131,7 +130,20 @@ h1 em
 .inner img:hover{
     transform: scale(1.5);
 }
-@media (max-width: 768px) {
+
+@media (max-width:540px)
+{
+    .effect {
+        text-align: center!important;
+        font-size:22px;
+    }
+    .new{
+        text-align: center!important;
+        font-size:26px;
+    }
+}
+
+@media (min-width:541px)and(max-width: 768px) {
     .effect {
         text-align: center!important;
         font-size:28px;
