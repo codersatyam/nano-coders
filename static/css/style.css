@@ -15,7 +15,7 @@ li{list-style: none;}
 }
 
 .navbar .custom-toggler li.active a{
-    background-color:orangered;
+    background-color:#d51501;
     border-radius: 5px;
 }
 .nav-item a{
@@ -271,13 +271,13 @@ h2 img{
 }
 .tut h2{
     font-family: 'Arvo', serif;
-    color: orangered;
+    color: #d51501;
     font-weight:bolder;
 }
 
   hr{
       width:50%;
-      background-color:orangered;
+      background-color:#d51501;
       height:1px!important;
   }
   .media img{
