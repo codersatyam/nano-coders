@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block title %} Buy {% endblock title %}
 {% load static %}
 {% block buyactive %} active {% endblock buyactive %}
@@ -15,4 +14,49 @@
 </div>
 
 <hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card pre">
+        <a href="/buy/sensor">
+        <img src="{% static 'images/hpre.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+        </a>
+      </div>    
+    </div>
+  
+    <div class="col-lg-6 col-12">
+      <div class="card pre">
+        <a href="/query/introduction">
+        <img src="{% static 'images/pythoncour.jpg' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+        </a>
+      </div>    
+    </div>   
+  
+      <div class="col-lg-6 col-12">
+      <div class="card pre">
+        <a href="/query/bestr">
+          <img src="{% static 'images/ML.png' %}"class="card-img-top" style="border-radius: 3%">
+        </a>
+        </div>    
+      </div>
+  
+      <div class="col-lg-6 col-12">
+        <div class="card pre" style="width:80%;">
+          <a href="/query/dpa">
+          <img src="{% static 'images/deeplearn.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+          </a>
+        </div>    
+      </div>
+    
+  
+  
+  </div>
+      </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+ 
+
+
 {% endblock body %}
