@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 
 {%block title %} Home {% endblock title %}
-{% block homeactive %} active  {% endblock homeactive %}
+{% block homeactive %} active {% endblock homeactive %}
 {%block body %}
 {% load static %}
 
 <style>
-  .set{
-    margin-top: 10%!important;
+  .set {
+    margin-top: 10% !important;
   }
 </style>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active not">
-        <img src="{% static 'images/logo3.png' %}" class="d-block w-100" alt="...">
+      <img src="{% static 'images/logo3.png' %}" class="d-block w-100" alt="...">
     </div>
   </div>
 </div>
 
-  <!--<div class="container my-4 mx-20">
+<!--<div class="container my-4 mx-20">
     <h1> Notifications......</h1>
    <h2>Snake Game <a href="/blogs" class="badge badge-primary">New</a></h2>
    <h2>Django Tutorial <a href="/blogs" class="badge badge-primary">New</a></h2>
@@ -284,14 +284,22 @@
 -->
 <br>
 <div class="container">
-<hr>
-<h1>UPCOMING FEATURES....</h1>
-<hr>
-<ul>
-<li><h2>QUIZS</h2></li>
-<li><h2>NOTES</h2></li>
-<li><h2>VIDEO CONTENT<h2></li>
-<li><h2>ML WORLD<h2></li>
+  <hr>
+  <h1>UPCOMING FEATURES....</h1>
+  <hr>
+  <ul>
+    <li>
+      <h2>QUIZS</h2>
+    </li>
+    <li>
+      <h2>NOTES</h2>
+    </li>
+    <li>
+      <h2>VIDEO CONTENT<h2>
+    </li>
+    <li>
+      <h2>ML WORLD<h2>
+    </li>
 
 
 </div>
@@ -300,11 +308,11 @@
 
 
 <div class="container-fluid">
-    <div class="row">
-<div class="pp col-12 text-center">
-  <h1 class="effect"><em>Tuto</em>rials&#9<em>Jun</em>ction&#9</h1>
-</div>
+  <div class="row">
+    <div class="pp col-12 text-center">
+      <h1 class="effect"><em>Tuto</em>rials&#9<em>Jun</em>ction&#9</h1>
     </div>
+  </div>
 </div>
 <hr>
 
@@ -313,39 +321,39 @@
     <div class="col-lg-6 col-12">
       <div class="card pre">
         <a href="/query/preprocessing">
-        <img src="{% static 'images/Dirty Data.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+          <img src="{% static 'images/Dirty Data.png' %}" class="card-img-top" style="border-radius: 3%;" alt="...">
         </a>
-      </div>    
+      </div>
     </div>
-  
+
     <div class="col-lg-6 col-12">
       <div class="card pre">
         <a href="/query/introduction">
-        <img src="{% static 'images/pythoncour.jpg' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
+          <img src="{% static 'images/pythoncour.jpg' %}" class="card-img-top" style="border-radius: 3%;" alt="...">
         </a>
-      </div>    
-    </div>   
-  
-      <div class="col-lg-6 col-12">
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-12">
       <div class="card pre">
         <a href="/query/bestr">
-          <img src="{% static 'images/ML.png' %}"class="card-img-top" style="border-radius: 3%">
+          <img src="{% static 'images/ML.png' %}" class="card-img-top" style="border-radius: 3%">
         </a>
-        </div>    
       </div>
-  
-      <div class="col-lg-6 col-12">
-        <div class="card pre" style="width:80%;">
-          <a href="/query/dpa">
-          <img src="{% static 'images/deeplearn.png' %}" class="card-img-top" style="border-radius: 3%;"alt="...">
-          </a>
-        </div>    
+    </div>
+
+    <div class="col-lg-6 col-12">
+      <div class="card pre" style="width:80%;">
+        <a href="/query/dpa">
+          <img src="{% static 'images/deeplearn.png' %}" class="card-img-top" style="border-radius: 3%;" alt="...">
+        </a>
       </div>
-    
-  
-  
+    </div>
+
+
+
   </div>
-      </div>
-    
-    
+</div>
+
+
 {% endblock body %}
